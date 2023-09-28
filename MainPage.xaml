@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage" Title="Calculator">
+
+    <Grid ColumnSpacing="1" RowSpacing="1" BackgroundColor="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- Label -->
+        <Label Grid.ColumnSpan="4" FontAttributes="Bold" FontSize="48" BackgroundColor="Black" Text="0" TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center" LineBreakMode="NoWrap" Margin="10" x:Name="LabelOutput">
+
+        </Label>
+
+        <!-- Button -->
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="7" Grid.Row="1" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="8" Grid.Row="1" Grid.Column="1" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="9" Grid.Row="1" Grid.Column="2" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="#9A80E5" TextColor="White" FontSize="Large" CornerRadius="0" Text="/" Grid.Row="1" Grid.Column="3" Clicked="ButtonOperatorClicked"></Button>
+
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="4" Grid.Row="2" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="5" Grid.Row="2" Grid.Column="1" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="6" Grid.Row="2" Grid.Column="2" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="#9A80E5" TextColor="White" FontSize="Large" CornerRadius="0" Text="*" Grid.Row="2" Grid.Column="3" Clicked="ButtonOperatorClicked"></Button>
+
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="1" Grid.Row="3" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="2" Grid.Row="3" Grid.Column="1" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="3" Grid.Row="3" Grid.Column="2" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="#9A80E5" TextColor="White" FontSize="Large" CornerRadius="0" Text="-" Grid.Row="3" Grid.Column="3" Clicked="ButtonOperatorClicked"></Button>
+
+        <Button BackgroundColor="White" TextColor="Black" FontSize="Large" CornerRadius="0" Text="0" Grid.Row="4" Grid.ColumnSpan="3" Clicked="ButtonNumberClicked"></Button>
+        <Button BackgroundColor="#9A80E5" TextColor="White" FontSize="Large" CornerRadius="0" Text="+" Grid.Row="4" Grid.Column="3" Clicked="ButtonOperatorClicked"></Button>
+
+        <Button BackgroundColor="LightGrey" TextColor="Black" FontSize="Large" CornerRadius="0" Text="C" Grid.Row="5" Clicked="ButtonClearClicked"></Button>
+        <Button BackgroundColor="#9A80E5" TextColor="White" FontSize="Large" CornerRadius="0" Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Clicked="ButtonEqualsClicked"></Button>
+    </Grid>
+
+</ContentPage>
